@@ -1,0 +1,51 @@
+Programmed in Python and whatever backend may be needed
+
+Classes: A Blueprint to mirror real life objects
+Objects: An instance of a class
+
+Overall breakdown:
+    This will be a locally downloaded and played, with alternating turns on the keyboard and mouse (as of now)
+    Game running on While loop, checking for win to hit true (or stalemate[aka: both players win = true !Check first]), once true, display players name that won
+
+    Classes:
+    Player - checkAmount, totalPoints, Color, Win = false (to start), Name
+    Piece - Color, Points, inPlay, canMove
+        Pawn - only forward, take diagonally (first move of each pawn can move 2 spaces)
+        Knight - L shape, any direction
+        King - one space, any direction
+        Queen - any amount in any direction
+        Rook - any amount horizontally and vertically
+        Bishop - any amount diagonally
+
+Edge Cases: 
+    En Passant - if white pawn is on 5th rank and a black pawn moves 2 spaces ahead on an adjacent file, white can capture the black 
+                 pawn only on the turn immediately after the move was played, similarly, if black pawn is on the 4th rank and white 
+                 pawn moves 2 spacesahead on an adjacent file, black can capture the white pawn 
+    Pawn promotion
+    Castling - if the king and rook have not moved, and the king is not in check, and castling would not put the king in check, 
+               and the king would not be moving over a square attacked by an enemy piece, and there are no pieces in between the two 
+               the king moves 2 spaces to the left or the right (wherever the empty space is) and the rook moves over and in front of 
+               the king, all in one move
+    Stalemate (draw game, both Players win set to True) *Cases* (Three-fold repetition, 50-move draw, )
+    Pinning (piece cant move if it will checkmate the king)
+
+Normal Cases:
+    White moves first
+    Moving while in Check
+    Moving
+    Checkmate
+    Taking
+    Moving only on turn
+    Proposal for draw
+
+Optional:
+    Time Control for games
+    Pre-moving
+    Game Summary
+    AI Opponent (Doesnt have to be a kittens)
+    Online/LAN play
+
+Questions/Problems:
+    GUI
+    keeping track of positions
+    How to deploy it
