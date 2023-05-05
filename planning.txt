@@ -46,6 +46,6 @@ Optional:
     Online/LAN play
 
 Questions/Problems:
-    GUI
+    GUI (tkinter, html canvas, pygame)
     keeping track of positions
     How to deploy it
