@@ -9,7 +9,7 @@ Overall breakdown:
 
     Classes:
     Player - checkAmount, totalPoints, Color, Win = false (to start), Name
-    Piece - Color, Points, inPlay, canMove
+    Piece - Color, Points, inPlay, canMove(Dont allow to move onto friendly piece), Location(keep knowledge of where it could move as well), hasMoved (Poten
         Pawn - only forward, take diagonally (first move of each pawn can move 2 spaces)
         Knight - L shape, any direction
         King - one space, any direction
@@ -20,7 +20,7 @@ Overall breakdown:
 Edge Cases: 
     En Passant - if white pawn is on 5th rank and a black pawn moves 2 spaces ahead on an adjacent file, white can capture the black 
                  pawn only on the turn immediately after the move was played, similarly, if black pawn is on the 4th rank and white 
-                 pawn moves 2 spacesahead on an adjacent file, black can capture the white pawn 
+                 pawn moves 2 spacesahead on an adjacent file, black can capture the white pawn (Location, canEnpassant(turn immediately after the move is made)) 
     Pawn promotion
     Castling - if the king and rook have not moved, and the king is not in check, and castling would not put the king in check, 
                and the king would not be moving over a square attacked by an enemy piece, and there are no pieces in between the two 
