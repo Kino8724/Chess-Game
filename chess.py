@@ -33,11 +33,26 @@ class Queen(Piece):
     pass
 
 def main():
-    layout = [[sg.Canvas(background_color="White", size=(500,500), expand_x=True, expand_y=True)]]
+    #-----things to figure out-----#
+    # Opens at default size, can expand, but has a minimum size req
+    # Figure out how to show grid lines
+    # Show graph position, according to mouse position (text box next to mouse)[hide later]
+    # Get tiles on the board
+
+    layout = [[sg.Graph(canvas_size=(500,500), 
+                        key="Board", 
+                        background_color="White", 
+                        enable_events = True, 
+                        motion_events = True, 
+                        graph_bottom_left= (-250,-250), 
+                        graph_top_right=(250,250), 
+                        expand_x= False, 
+                        expand_y= False)]]
 
     # Create the window
     window = sg.Window("Hello", layout, resizable = True)
-
+    window.Finalize()
+    window["Board"].draw_rectangle((0,0), (0,0), fill_color= 'purple', line_color='purple')
     # Create an event loop
     while True:
         event, values = window.read()
