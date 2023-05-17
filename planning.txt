@@ -39,6 +39,7 @@ Normal Cases:
     Proposal for draw
 
 Optional:
+    Save Game State
     Time Control for games
     Pre-moving
     Game Summary
